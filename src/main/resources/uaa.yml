@@ -1,12 +1,19 @@
-issuer:
-  uri: http://localhost:8090/uaa
-spring_profiles: default,hsqldb
+
+spring_profiles: postgresql,default
+
+name: shaun_uaa
+database:
+  url: jdbc:postgresql://192.168.99.100:5432/uaa
+  username: docker
+  password: shaun
 
 encryption:
   active_key_label: CHANGE-THIS-KEY
   encryption_keys:
-  - label: CHANGE-THIS-KEY
-    passphrase: CHANGEME
+    - label: CHANGE-THIS-KEY
+      passphrase: CHANGEME
+
+
 
 login:
   serviceProviderKey: |
